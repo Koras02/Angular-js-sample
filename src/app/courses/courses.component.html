@@ -7,4 +7,15 @@
    {{course.name}}
 </li>
 </ul>
-<app-course-detial [course]="selectedCourse"></app-course-detial>
+<div *ngIf="selectedCourse">
+    <h2>{{selectedCourse.name | uppercase}} Details</h2>
+    <div><span>ID: </span></div>
+    {{selectedCourse.id}}</div>
+        <div>
+            <label>
+                Nmae:
+                <input [(ngModel)]="selectedCourse.name"
+                placeholder="name">
+            </label>
+        </div>
+    </div>
